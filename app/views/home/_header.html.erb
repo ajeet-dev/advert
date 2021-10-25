@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <%= link_to 'Advert', root_path, class:"navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+      <% if advert_signed_in? %>
+        <%= link_to 'Ads', home_Ads_path, class:"nav-link" %>
+        <%= link_to 'Create Ad', new_ad_path, class:"nav-link" %>
+        <%= link_to 'Sign Out', destroy_advert_session_path, method: :delete, class:"nav-link" %>
+      <% else %>
+        <%= link_to 'Register', new_advert_registration_path, class:"nav-link" %>
+        <%= link_to 'Sign In', new_advert_session_path, class:"nav-link" %>
+      <% end %> 
+      </div>
+    </div>
+  </div>
+</nav>

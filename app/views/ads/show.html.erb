@@ -1,0 +1,12 @@
+
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @ad.Caption %></h5>
+    <p class="card-text"><%= @ad.Ad_data %></p>
+    <%= link_to 'Edit', edit_ad_path(@ad), class:"btn btn-secondary" %>
+    <%= link_to 'Back', ads_path, class:"btn btn-dark" %>
+  </div>
+</div>
+
